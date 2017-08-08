@@ -1,0 +1,138 @@
+html, body {
+        font-family: sans-serif;;
+        background: #999999;
+        margin:0;
+        height: 100%;
+}
+
+#main {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    width:100%;
+}
+
+#main > article {
+    margin: 0px;
+    padding: 10px;
+    background: white;
+    flex: 4 1 75%;
+    order: 2;
+}
+
+article a, aside a {
+    color: #2487D7;
+    text-decoration: none;
+}
+
+article a:hover, aside a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: serif;
+}
+
+h1 {
+    border-bottom: 1px solid #666666;
+}
+
+h2 {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+#main > nav, #main > aside {    
+    margin: 0px;
+    padding: 10px;
+    background: #F9F9F9;
+    flex: 1 6 20%;
+}
+
+#main > nav {    
+    order: 1;
+    border-right: 1px solid #E5E5E5;
+}
+
+#main > aside {
+    border-left: 1px solid #E5E5E5;
+    order: 3;
+}
+
+aside h1 {
+    margin: 5px;
+    font-size: large;
+    color: #444444;
+    border-bottom-color: #BBBBBB;
+}
+
+aside p {
+    font-size: smaller;
+    color: #444444;
+    border-bottom: 1px solid #BBBBBB;
+}
+
+header, footer {
+    display: block;
+    margin: 0px;
+    padding: 5px;
+    min-height: 25px;
+    background: #000000;
+}
+
+header > a {
+    width: 33%;
+    display: block;
+    float: left;
+    text-align: center;
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+header > a:hover {
+    background: #aaaaaa;
+    text-decoration: underline;
+}
+
+textarea {
+    min-width: 100%;
+    width: 100%;
+    min-height: 700px;
+}
+
+nav > a {
+    width: 100%;
+    display: block;
+    color: #2487D7;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    background: #E8E8E8;
+}
+
+.search > input {
+    width: 100%;
+}
+
+#actions {
+    width: 100%;
+    background: #EEEEEE;
+    padding: 10px;
+    margin: -10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+    #main, #page {
+        flex-direction: column;
+    }
+    #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+        order: 0;
+    }
+}
