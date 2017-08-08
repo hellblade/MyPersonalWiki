@@ -44,6 +44,7 @@ Note - in your apache config you may need the following in your VirtualHost:
 * You can rename pages when editing. This won't update any wiki words however, so some links won't be updated to the new name. Changing the case and such will not affect it.
 
 ## Possible future enhancements
+* More mobile friendly
 * Better/more optimised searching
 * Dark theme
 * Better history viewing
